@@ -1,15 +1,19 @@
-const output = fizzBuzz(7);
+const output = fizzBuzz(15);
 console.log(output);
 
 function fizzBuzz(input) {
- let typeOfInput = (typeof input) === "string" ? "Not a Number" :(typeof input) === "boolean"?"Not a Number": input;
- 
- let checkOutput = typeOfInput % 15 === 0 ? "FizzBuzz"
-      : typeOfInput % 3 === 0
-      ? "Fizz"
-      : typeOfInput % 5 === 0
-      ? "Buzz"
-      : typeOfInput;
+ let typeOfInput = (typeof input) !== "number" ? "Not a Number" :input;
+ let a = typeOfInput % 3;
+ let b = typeOfInput % 5;
+
+ let checkOutput =
+   typeOfInput % 3 == 0 && typeOfInput % 5 === 0 ? "FizzBuzz"
+     :
+ typeOfInput % 3 === 0 ? "Fizz"
+     :
+      typeOfInput % 5 === 0 ? "Buzz"
+     : 
+     typeOfInput;
 
 return checkOutput;    }
 
