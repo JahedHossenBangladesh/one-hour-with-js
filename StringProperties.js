@@ -20,6 +20,7 @@ function showProperties(obj){
 
 // find the lowest number in an array 
 // this is me
+// this is edit the yester da
 function lowestNumber(arr){
     let lowest = arr[0];
     for(let i = 0; i < arr.length; i++){
